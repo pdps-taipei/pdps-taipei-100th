@@ -3,8 +3,8 @@
 .menu
     @include flexCenterRow
     @include setLinkStyleAll
-    background-color: $dark-brown
-    color: $light_white
+    background-color: $hight-light
+    color: $dark_brown
     border-style: solid
     border-color: $hight_light
     border-width: 0 0 6px 0
@@ -26,8 +26,8 @@
                 margi-left: 20px
             .content
                 margin-left: 20px
-                color: $light_white
-                font-weight: 800
+                color: $dark_brown
+                font-weight: 300
                 .ch
                     font-size: 16px
                 .en
@@ -40,10 +40,10 @@
             @media screen and (max-width: 1020px)
                 margin-left: 0px
             .menu-a
-                color: white
+                color: $dark_brown
                 text-decoration: none
                 &:hover
-                    color: #ef9350
+                    color: #d7d7d7
             .m-item
                 position: relative
                 cursor: pointer
@@ -55,8 +55,8 @@
                     left: -50%
                     position: absolute
                     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.5)
-                    background-color: #231917
-                    border: solid 1px #ef9350
+                    background-color: $dark_brown
+                    border: solid 1px $hight-light
                     width: 141px
                     z-index: 1
                     .sub-item
@@ -64,9 +64,9 @@
                         color: $light_white
                         padding: 10px 0
                         &:hover
-                            color: #ef9350
+                            color: $hight-light
                 &:hover
-                    color: #ef9350
+                    color: $hight-light
                     .submenu
                         color: $light_white
                         display: flex
@@ -94,7 +94,7 @@
                 papdding: 5px 0 5px 15px
                 font-size: 14px
             .search-list
-                background-color: white
+                background-color: $black
                 max-height: 200px
                 width: 150px
                 position: absolute
@@ -118,7 +118,7 @@
                 height: 32px
                 font-size: 12px
                 border-radius: 100%
-                background-color: #ef9350
+                background-color: #287C01
                 border: solid 1px #ffb954
                 color: #231917
                 // margin-left: 10px
