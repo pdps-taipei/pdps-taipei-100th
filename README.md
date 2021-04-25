@@ -7,3 +7,5 @@ PING DENG ELEMENTARY SCHOOL 100TH ANNIVERSARY WEBSITE
 git add .
 git commit -m "xxxxxxx"
 git push
+
+hugo server
