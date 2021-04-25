@@ -1,0 +1,17 @@
+<div class="latest-news">
+    {{ $news := sort .items ".Params.start_date" "desc" }}
+    {{ range $index, $page := first 5 .items}}
+    {{ if eq .Params.draft false }}
+    <a class="information row" href="{{ .RelPermalink }}">
+        <div class="col-2 information-start-date">{{ .Params.start_date | strings.TrimLeft "" | strings.TrimRight "" }}</div>
+        <div class="col-9 information-title">{{ .Params.title }}</div>
+        <div class="col-1"></div>
+        <!--<i class="material-icons" style="margin-left: 5px">slideshow</i>-->
+        
+    </a>
+    
+    {{ end }}
+    {{ end }}
+    <a href="/news" class="more-news">更多消息...</a>
+</div>
+

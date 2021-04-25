@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div>
+    {{ partial "carousel" (dict "items" .Site.Data.carousel.home ) }}
+    <div class="_container">
+        <div style="position: relative;">
+            <div class="page-title">
+                <div class="line"></div>
+                <div class="page-title-text" style="top: -30px">
+                    <div class="en">Latest News</div>
+                    <div class="ch">最新消息</div>
+                </div>
+            </div>
+        </div>
+        <!-- Latest News Components-->
+        {{ $news := first 6 (sort (where .Site.RegularPages "Section" "in" (slice "news")) ".Params.start_date" "desc") }}
+        {{ partial "latest-news" (dict "items" $news)}}
+
+        <div class="upcoming-event" style="position: relative;">
+            <div class="page-title">
+                <div class="line"></div>
+                <div class="page-title-text" style="top: -30px">
+                    <div class="en">Upcoming Events</div>
+                    <div class="ch">最近活動</div>
+                </div>
+            </div>
+        </div>
+        <!-- upcoming event -->
+        
+        {{ $exhibitions :=  where .Site.RegularPages "Section" "in" (slice "exhibitions") }}
+        {{ $exhibitions = sort $exhibitions ".Params.start_date" }}
+
+        {{ partial "upcoming-event" (dict "items"  $exhibitions ) }}
+        
+    </div>
+</div>
+{{ end }}

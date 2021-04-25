@@ -1,0 +1,161 @@
+@import "../../base"
+
+.event-page
+  background-color: $dark_brown
+  padding: 100px 0px 0 0px
+  .container-xl
+    border-style: solid
+    border-width: 3px 0 0 0
+    border-color: $hight-light
+    position: relative
+    .top-title
+      @include flexCenterRow
+      justify-content: center
+      flex-direction: column
+      color: $hight-light
+      position: absolute
+      background-color: $dark_brown
+      position: absolute
+      width: 100%
+      right: 50%
+      margin-bottom: 10px
+      transform: translateX(50%) translateY(-70%)
+      letter-spacing: 3.4px
+      .ch
+        font-size: 32px
+        //right: 50%
+        //transform: translateX(50%) translateY(-50%)
+
+      .en
+        font-size: 20px
+        white-space: noWrap
+    .event-tag
+        color: white
+        margin-top: 50px
+        @include flexCenterRow
+        .dropdown-year
+            @include flexCenterRow
+            position: relative
+            width: 227px
+            height: 36px
+            border-radius: 18px
+            border: solid 2px #ffffff
+            cursor: pointer
+            &:hover
+                background-color: white
+                color: black
+            .item-sub-menu
+                @include flexCenterCol
+                justify-content: flex-start
+                position: absolute
+                top: 42px
+                left: 0
+                background-color: white
+                width: 100%
+                color: black
+                max-height: 200px
+                overflow: auto
+                z-index: 50
+                display: none
+                // padding-top: 50px
+                .menu-item
+                    @include flexCenterRow
+                    min-height: 50px
+                    width: 100%
+                    &:hover
+                        background-color: #DDD
+
+        .tag-group
+            @include flexCenterRow
+            flex-wrap: wrap
+            .item
+                @include flexCenterRow
+                width: 115px
+                height: 36px
+                border-radius: 18px
+                background-color: #ffffff
+                color: #231917
+                margin: 10px 5px
+                cursor: pointer
+                &:hover
+                    background-color: $hight-light
+            .active
+                background-color: $hight-light
+        .search
+            @include flexCenterRow
+            align-items: flex-end
+            .pic
+                margin-right: 10px
+            .input
+                width: 200px
+                border-bottom-style: solid
+                border-color: #ef9350
+                border-bottom-width: 1px
+                background-color: rgba(0,0,0,0)
+                border-width: 0 0 1px 0
+                color: white
+                outline: none
+                letter-spacing: 3px
+        @media all and(max-width: 900px)
+            flex-direction: column
+            .tag-group
+                margin: 40px 0
+                .item
+                    margin: 10px 0
+    .event-waterfall
+        margin-top: 20px
+        .event-item
+            width: 350px
+            .event-card
+                background-color: #231917!important
+                width: 300px
+                border: 0px!important
+                box-shadow: 0px 0px 0px 0px!important
+                text-align: center
+                .link
+                    .info
+                        margin-bottom: 10px
+                        .date
+                            font-size: 20px
+                            color: $light-white
+                            letter-spacing: 1.3px
+
+                    .img
+                        width: 230px
+                        height: 270px
+                        background-image: url("../assets/new.png")
+                        background-size: auto 100%
+                        background-repeat: no-repeat
+                        background-position: center
+                        position: relative
+                        transition: background-size 0.5s
+                        margin: auto
+                        &:after
+                            content: "閱讀更多"
+                            color: $hight-light
+                            font-size: 20px
+                            position: absolute
+                            opacity: 0
+                            top: 50%
+                            left: 50%
+                            transform: translateY(-50%) translateX(-50%)
+                    &:hover
+                        .img
+                            background-size: auto 120%
+                            &:after
+                                opacity: 1
+                    .title
+                        margin-top: 50px
+                        font-size: 20px
+                        font-weight: 600
+                        color: $light-white
+                        letter-spacing: 2.1px
+                        position: relative
+
+                    .subtitle
+                        margin-top: 8px
+                        margin-bottom: 40px
+                        letter-spacing: 1.4px
+                        color: $hight-light
+  @media all and(max-width: 900px)
+    padding: 100px 20px 0 20px

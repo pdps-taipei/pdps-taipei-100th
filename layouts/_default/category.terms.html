@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="_container">
+    <h1>Visual Art</h1>
+    {{ range .Site.Taxonomies.categories.visual_art }}
+        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+    {{ end }}
+    
+</div>
+{{ end }}

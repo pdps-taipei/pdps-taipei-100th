@@ -1,0 +1,103 @@
+@import "../base.sass"
+
+.foot
+    @include flexCenterCol
+    background-color: $dark_brown
+    //padding: 45px 100px 100px 100px
+    font-size: $font_middle
+    font-weight: 800
+    ._container
+        @include flexCenterRow
+        border-style: solid
+        border-width: 5px 0 0 0
+        border-color: $hight-light
+        padding-top: 45px
+        width: 100%
+        .about
+            line-height: 34px
+            letter-spacing: 1.4px
+            padding: 0 20px
+            .info1
+                .left
+                    color: $light_white
+                    font-weight: 800
+                .right
+                    color: $dark_white
+            .quick-link
+                color: $hight-light
+                margin: 47px 0
+                .link-group:nth-child(1)
+                    padding-left: 0
+                .link-group:nth-child(2)
+                    padding: 0 33px 0 10px
+                    border-width: 0 2px
+                    border-style: solid
+                    border-color: $hight-light
+                .link-group
+                    .links
+                        cursor: pointer
+                        display: block
+                        color: $hight-light
+        .quick-link
+            color: $hight-light
+            margin: 47px 0
+            .link-group:nth-child(1)
+                padding-left: 0
+            .link-group:nth-child(2)
+                padding: 0 33px 0 10px
+                border-width: 0 2px
+                border-style: solid
+                border-color: $hight-light
+            .link-group
+                .links
+                    cursor: pointer
+                    display: block
+                    color: $hight-light
+                    margin: 8px 0
+        .map
+            //background-image: url("../assets/map.png")
+            background-size: cover
+            height: 358px
+            width: 100%
+            filter: hue-rotate(175deg) !important
+        .right-text
+            width: 100%
+            color: $dark_white
+            text-align: left
+            padding-left: 20px
+        .mobile
+            display: none
+@media all and (max-width: 900px)
+    .foot
+        padding: 45px 20px 20px 20px
+        font-size: $font_small
+        ._container
+            .about
+                .info1
+                    .mobile
+                        margin-bottom: 20px
+                    .right
+                        display: none
+                    .left
+                        display: none
+                .quick-link
+                    display: block
+                    margin: 0
+                    .link-group
+                        padding: 0
+                    .link-group:nth-child(2)
+                        padding: 0
+                        border: none !important
+                .mobile
+                    display: block
+                    color: $light_white
+            .quick-link
+                display: block
+                margin: 0
+                .link-group
+                    padding: 0
+                .link-group:nth-child(2)
+                    padding: 0
+                    border: none !important
+            .map
+                margin-top: 20px

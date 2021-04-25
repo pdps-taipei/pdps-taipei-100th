@@ -1,0 +1,6 @@
+.DS_Store
+.vscode
+resources/
+scripts/output/*
+public/*
+backend/

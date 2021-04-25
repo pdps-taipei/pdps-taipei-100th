@@ -1,0 +1,99 @@
+{{ define "main" }}
+
+<div class="event-page-content mb-5">
+    <div class="_container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-1"></div>
+                <div class="col-12 col-lg-5 cover-pic" style="background-image:url('{{ .Page.Params.cover }}')"></div>
+                <div class="col-12 col-lg-5">
+                    <div class="info">
+                        <div class="title-info">
+                            {{ if .Page.Params.categories }}
+                            {{ $type_of_art := index .Page.Params.categories 0 }}
+                            {{ if eq $type_of_art "visual_art" }}
+                                {{ $type_of_art := .Language.Params.tag_visual_art }}
+                                <button class="type">{{ $type_of_art }}</button>
+                            {{ else if eq $type_of_art "public_art" }}
+                                {{ $type_of_art := .Language.Params.tag_public_art }}
+                                <button class="type">{{ $type_of_art }}</button>
+                            {{ else if eq $type_of_art "film_art" }}
+                                {{ $type_of_art := .Language.Params.tag_film_art }}
+                                <button class="type">{{ $type_of_art }}</button>
+                            {{ else if eq $type_of_art "performing_art" }}
+                                {{ $type_of_art := .Language.Params.tag_performing_art }}
+                                <button class="type">{{ $type_of_art }}</button>
+                            {{ else if eq $type_of_art "ai_music" }}
+                                {{ $type_of_art := .Language.Params.tag_ai_music }}
+                                <button class="type">{{ $type_of_art }}</button>
+                            {{ end }}
+                            {{ end }}
+                            
+                            <div class="time">{{ .Page.Params.start_date | strings.TrimLeft "" | strings.TrimRight "" }} ~ {{ .Page.Params.end_date  | strings.TrimLeft "" | strings.TrimRight ""  }}</div>
+                            <div class="title">{{ .Page.Params.title }}</div>
+                            <div class="hint">{{ .Page.Params.subtitle }}</div>
+                        </div>
+                        <div class="date-info">
+                            <div class="left"></div>
+                            <div class="right">
+                                <div class="sub-title">
+                                    <div class="slash"></div>
+                                    <div class="title">{{ .Language.Params.ed_information }}</div>
+                                </div>
+                                <div class="li">
+                                    <div class="_left">{{ .Language.Params.ed_host }}</div>
+                                    <div class="_right">{{ .Page.Params.host }}</div>
+                                </div>
+                                <div class="li">
+                                    <div class="_left">{{ .Language.Params.ed_performer }}</div>
+                                    <div class="_right">{{ .Page.Params.performer }}</div>
+                                </div>
+                                <div class="li">
+                                    <div class="_left">{{ .Language.Params.ed_time }}</div>
+                                    <div class="_right">{{ .Page.Params.daily_start_time | strings.TrimLeft "" | strings.TrimRight "" }} {{ if .Page.Params.daily_end_time }}~ {{ .Page.Params.daily_end_time | strings.TrimLeft "" | strings.TrimRight "" }} {{end}}</div>
+                                </div>
+                                <div class="li">
+                                    <div class="_left">{{ .Language.Params.ed_location }}</div>
+                                    <div class="_right">{{ .Page.Params.location }}</div>
+                                </div>
+                                <div class="li">
+                                    <div class="_left">{{ .Language.Params.ed_ticket_info }}</div>
+                                    <div class="_right">{{ .Page.Params.ticket_info }}</div>
+                                </div>
+                                {{ if .Page.Params.registration_link }}
+                                <div class="li">
+                                    <div class="_left">{{ .Language.Params.ed_registration_link }}</div>
+                                    <a class="_right" href="{{ .Page.Params.registration_link }}" target="_blank">按我前往</a>
+                                </div>
+                                {{ end }}
+                                
+                            </div>
+                        </div>
+                        <div class="date-info">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="down">
+                        <div class="left">
+                            <div class="sub-title">
+                                <div class="slash"></div>
+                                <div class="title">{{ .Language.Params.ed_detail }}</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="content-title"></div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="content">{{ .Content }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+

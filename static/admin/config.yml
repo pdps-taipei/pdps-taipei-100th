@@ -1,0 +1,181 @@
+backend:
+  name: git-gateway
+  #name: test-repo
+  #name: github
+  #repo: arts-nthu/website
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - label: "資料"
+    name: "data"
+    files:
+      - label: "輪播"
+        name: "carousel"
+        file: "data/carousel.toml"
+        fields:
+          - label: "首頁輪播"
+            name: home
+            widget: list
+            fields:
+              - { label: "標題", name: title, widget: string }
+              - { label: "副標題", name: subtitle, widget: string, required: false }
+              - { label: "圖片", name: image, widget: string }
+
+      - label: "成員介紹"
+        name: "faculty"
+        file: "data/faculty.toml"
+        fields:
+          - label: "成員"
+            name: curator
+            widget: list
+            fields:
+              - {label: "姓名", name: name, widget: string}
+              - {label: "英文姓名", name: en_name, widget: string}
+              - {label: "職稱", name: title, widget: string}
+              - {label: "英文職稱", name: en_title, widget: string}
+              - {label: "學歷", name: education, widget: string}
+              - {label: "英文學歷", name: en_education, widget: string}
+  - name: "news"
+    label: "消息"
+    folder: "content/zh-tw/news"
+    create: true
+    summary: "{{start_date}}-{{slug}}"
+    sortableFields: ['start_date', 'title']
+    slug: "{{date}}-{{slug}}"
+    fields:
+      - { label: "標題", name: title, widget: string}
+      - { label: "發佈日期", name: "date", widget: "hidden" }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false }
+      - label: "開始日期"
+        name: "start_date"
+        widget: "string"
+        hint: "日期格式是YYYY-MM-DD"
+        pattern: ['\d\d\d\d-\d\d-\d\d', "YYYY-MM-DD"]
+      - label: "類型"
+        name: "categories"
+        widget: "hidden"
+        default: ["news"]
+      - { label: "內容", name: "body", widget: "markdown" }
+  - name: "post"
+    label: "專欄"
+    folder: "content/zh-tw/posts"
+    create: true
+    summary: "{{start_date}}-{{slug}}"
+    sortableFields: ['start_date', 'title']
+    slug: "{{start_date}}-{{slug}}"
+    fields:
+      - { label: "標題", name: "title", widget: "string" }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false }
+      - label: "封面圖片"
+        name: "cover"
+        widget: "string"
+        hint: "請先上傳至imgur然後複製開頭是https://i.imgur.com/的網址"
+        pattern: ['https://i.imgur.com/', "https://i.imgur.com/"]
+      - { label: "發佈日期", name: "date", widget: "hidden" }
+      - label: "標籤"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        field: { label: "標籤", name: "tag", widget: "string"}
+      - { label: "內容", name: "body", widget: "markdown" }
+  - name: "exhibition" # Used in routes, e.g., /admin/collections/blog
+    label: "展覽" # Used in the UI
+    folder: "content/zh-tw/exhibitions" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    summary: "{{start_date}}-{{slug}}"
+    sortableFields: ['start_date', 'title']
+    view_filters:
+      - label: '2022年的展覽'
+        field: start_date
+        pattern: '2022'
+      - label: '2021年的展覽'
+        field: start_date
+        pattern: '2021'
+      - label: '2020年的展覽'
+        field: start_date
+        pattern: '2020'
+      - label: '2019年的展覽'
+        field: start_date
+        pattern: '2019'
+      - label: '2018年的展覽'
+        field: start_date
+        pattern: '2018'
+      - label: '2017年的展覽'
+        field: start_date
+        pattern: '2017'
+      - label: '2016年的展覽'
+        field: start_date
+        pattern: '2016'
+      - label: '2015年的展覽'
+        field: start_date
+        pattern: '2015'
+      - label: '2014年的展覽'
+        field: start_date
+        pattern: '2014'
+    slug: "{{start_date}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "標題", name: "title", widget: "string" }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false }
+      - label: "封面圖片"
+        name: "cover"
+        widget: "string"
+        hint: "請先上傳至imgur然後複製開頭是https://i.imgur.com/的網址"
+        pattern: ['https://i.imgur.com/', "https://i.imgur.com/"]
+      - { label: "發佈日期", name: "date", widget: "hidden" }
+      - label: "展演類型"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options:
+          - { label: "視覺藝術", value: "visual_art" }
+          - { label: "表演藝術", value: "performing_art" }
+          - { label: "公共藝術", value: "public_art" }
+          - { label: "電影藝術", value: "film_art" }
+          - { label: "AI樂團", value: "ai_music" }
+      - label: "主辦單位"
+        name: "host"
+        widget: "string"
+        default: "臺北市平等國小百周年校慶專屬網站"
+        required: false 
+      - label: "表演者"
+        name: "performer"
+        widget: "string"
+        required: false
+      - label: "地點"
+        name: "location"
+        widget: "string"
+        required: false
+      - label: "開始日期"
+        name: "start_date"
+        widget: "string"
+        hint: "日期格式是YYYY-MM-DD"
+        pattern: ['\d\d\d\d-\d\d-\d\d', "YYYY-MM-DD"]
+      - label: "結束日期"
+        name: "end_date"
+        widget: "string"
+        hint: "日期格式是YYYY-MM-DD"
+        pattern: ['\d\d\d\d-\d\d-\d\d', "YYYY-MM-DD"]
+      - label: "開始時間"
+        name: "daily_start_time"
+        widget: "string"
+        hint: "時間格式是HH:mm"
+        pattern: ['\d\d:\d\d', "HH:mm"]
+        required: false
+      - label: "結束時間"
+        name: "daily_end_time"
+        widget: "string"
+        hint: "時間格式是HH:mm"
+        pattern: ['\d\d:\d\d', "HH:mm"]
+        required: false
+      - label: "票務資訊"
+        name: "ticket_info"
+        widget: "string"
+        required: false
+        default: ""
+      - label: "註冊連結"
+        name: "registration_link"
+        required: false
+        default: ""
+
+      - { label: "內容", name: "body", widget: "markdown" }

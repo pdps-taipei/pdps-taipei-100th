@@ -1,0 +1,160 @@
+@import "../base.sass"
+
+.menu
+    @include flexCenterRow
+    @include setLinkStyleAll
+    background-color: $dark-brown
+    color: $light_white
+    border-style: solid
+    border-color: $hight_light
+    border-width: 0 0 6px 0
+    padding: 5px 10px
+    position: fixed
+    z-index: 500
+    width: 100%
+    top: 0px
+    left: 0
+    .m-container
+        //max-width: 1280px
+        margin: 0 auto
+        width: 95%
+        +flexLayout('between', 'row')
+        .brand
+            +flexLayout('start', 'row')
+            .pic
+                width: 50px
+                margi-left: 20px
+            .content
+                margin-left: 20px
+                color: $light_white
+                font-weight: 800
+                .ch
+                    font-size: 16px
+                .en
+                    font-size: 14px
+        .main
+            +flexLayout('around', 'row')
+            flex: 1
+            max-width: 500px
+            margin-left: 100px
+            @media screen and (max-width: 1020px)
+                margin-left: 0px
+            .menu-a
+                color: white
+                text-decoration: none
+                &:hover
+                    color: #ef9350
+            .m-item
+                position: relative
+                cursor: pointer
+                margin-right: 10px
+                .submenu
+                    +flexLayout('center', 'col')
+                    display: none
+                    top: 0
+                    left: -50%
+                    position: absolute
+                    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.5)
+                    background-color: #231917
+                    border: solid 1px #ef9350
+                    width: 141px
+                    z-index: 1
+                    .sub-item
+                        text-align: center
+                        color: $light_white
+                        padding: 10px 0
+                        &:hover
+                            color: #ef9350
+                &:hover
+                    color: #ef9350
+                    .submenu
+                        color: $light_white
+                        display: flex
+
+        .right
+            +flexLayout('between', 'row')
+            .mail
+                @include flexCenterRow
+                margin-right: 20px
+                cursor: pointer
+                img
+                    width: 20px
+                    margin-right: 10px
+            .calander
+                @include flexCenterRow
+                margin-right: 20px
+                cursor: pointer
+                img
+                    width: 18px
+                    margin-right: 10px
+            .search
+                border-radius: 100px
+                background-color: rgba(0,0,0,0)
+                margin-right: 20px
+                papdding: 5px 0 5px 15px
+                font-size: 14px
+            .search-list
+                background-color: white
+                max-height: 200px
+                width: 150px
+                position: absolute
+                top: 60px
+                right: 120px
+                color: black
+                overflow: auto
+                font-size: 16px
+                .search-item
+                    +flexLayout('center', 'row')
+                    width: 100%
+                    min-height: 50px
+                    cursor: pointer
+                    padding: 10px
+                    box-sizing: border-box
+                    &:hover
+                        background-color: #DDD
+            .lang
+                +flexLayout('center', 'row')
+                width: 32px
+                height: 32px
+                font-size: 12px
+                border-radius: 100%
+                background-color: #ef9350
+                border: solid 1px #ffb954
+                color: #231917
+                // margin-left: 10px
+                cursor: pointer
+            .search
+                border-radius: 100px
+                border: solid 1px #ffffff
+                outline: none
+                color: #ffffff
+                padding-left: 10px
+    @media all and (max-width: 900px)
+        display: none
+
+.menu-mobile
+    background: $dark_brown
+    display: none!important
+    .m-container
+        width: 75%
+        max-width: 1280px
+        margin: 0
+        
+        .brand
+            display: flex
+            flex-direction: row
+            width: 80%
+            .pic
+                width: 50px
+                height: 50px
+            .content
+                margin-left: 20px
+                color: $light_white
+                font-weight: 200
+                .ch
+                    font-size: 16px
+                .en
+                    font-size: 14px
+
+    @media all and (max-width: 900px)
+        display: flex!important

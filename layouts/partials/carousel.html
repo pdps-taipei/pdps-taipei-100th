@@ -1,0 +1,23 @@
+<div id="index-carousel" class="carousel slide carousel-fade" data-ride="carousel" style="height: 500px">
+    <div class="carousel-inner" style="height: 100%;">
+
+        {{ range $index, $slide := .items }}
+        
+        <div class="carousel-item {{ if eq $index 0 }} active {{ end }}" style="height: 100%; width: 100%; color: white">
+            <div class="carousel-block" style="background-image: url('{{ .image }}');" alt="..." ></div>
+            <div class="carousel-caption d-none d-md-block">
+                
+            </div>
+        </div>
+       
+        {{ end }}
+    </div>
+    <a class="carousel-control-prev" href="#index-carousel" role="button" data-slide="prev" style="height: 500px">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#index-carousel" role="button" data-slide="next" style="height: 500px">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

@@ -1,0 +1,10 @@
+[
+    {{ range $index, $e := (where .Data.Pages "Type" "exhibitions" ) }}
+    {{ if $index }}, {{ end }}
+    {
+        "title": "{{ .Title }}",
+        "start": "{{ .Params.start_date | strings.TrimLeft "" | strings.TrimRight "" }}",
+        "end": "{{ .Params.end_date | strings.TrimLeft "" | strings.TrimRight "" }}"
+    }
+    {{ end }}
+]
