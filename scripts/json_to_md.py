@@ -7,7 +7,7 @@ r = requests.get("https://arts.nthu.edu.tw/api/exhibitions?typeOfArt=visual_art"
 ---
 registration_link: null
 draft: false
-title: Juanjo Novella公共藝術個展
+title: Juanjo Novella籌備會議個展
 cover: https://i.imgur.com/GpcVKk0h.jpg
 date: 2020-05-20T08:49:47.832Z
 categories:

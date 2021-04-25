@@ -40,13 +40,6 @@ parent = "about"
 weight = 60
 
 [[main]]
-identifier = "collect_art"
-name = "平等十景"
-url = "/about/collect/art/"
-parent = "about"
-weight = 70
-
-[[main]]
 identifier = "programs"
 name = "籌備活動"
 url = "/exhibitions/"
@@ -96,7 +89,7 @@ parent = "programs"
 
 [[main]]
 identifier = "posts"
-name = "當日時程"
+name = "活動介紹"
 url = "/posts/"
 weight = 170
 

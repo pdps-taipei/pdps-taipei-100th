@@ -5,7 +5,7 @@ categories:
   - ai_music
   - 2020fall
 host: 清華大學藝術中心
-performer: "清華AI樂團，指揮: 邱君強"
+performer: "清華，指揮: 邱君強"
 location: 蘆洲KHS表演廳
 start_date: "2020-10-17"
 end_date: "2020-10-17"
