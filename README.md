@@ -2,6 +2,8 @@
 
 PING DENG ELEMENTARY SCHOOL 100TH ANNIVERSARY WEBSITE
 
+## 指令
+
 git add .
 git commit -m "xxxxxxx"
 git push
