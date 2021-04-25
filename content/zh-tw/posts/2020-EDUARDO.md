@@ -1,10 +1,10 @@
 ---
-title:  2020春 音樂家介紹 EDUARDO TAMI
-date: 2020-05-15
+title:  10:00-10:30  百年樹人，植樹活動。
+date: 2020-06-06
 cover: https://i.imgur.com/5zCfid8h.png
 draft: false
 tags:
-  - 2020春音樂家介紹
+  - 當日活動介紹
 ---
 
 FLUTE - TANGO - DANCE
@@ -26,6 +26,3 @@ Eduardo Tami長期於國際間演奏，巡迴點包含日本，印尼，馬來�
 
 {{< youtube bSwPC_gq5co >}}
 
-{{< youtube IAaNd9UC5EQ >}}
-
-{{< youtube 6tVxGgt_zag >}}

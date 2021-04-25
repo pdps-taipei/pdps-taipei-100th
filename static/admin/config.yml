@@ -128,11 +128,11 @@ collections:
         widget: "select"
         multiple: true
         options:
-          - { label: "視覺藝術", value: "visual_art" }
-          - { label: "表演藝術", value: "performing_art" }
-          - { label: "公共藝術", value: "public_art" }
-          - { label: "電影藝術", value: "film_art" }
-          - { label: "AI樂團", value: "ai_music" }
+          - { label: "行政會議", value: "visual_art" }
+          - { label: "場地整修", value: "performing_art" }
+          - { label: "籌備會議", value: "public_art" }
+          - { label: "活動練習", value: "film_art" }
+          - { label: "預演彩排", value: "ai_music" }
       - label: "主辦單位"
         name: "host"
         widget: "string"

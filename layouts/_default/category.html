@@ -21,45 +21,44 @@
 <div class="_container">
     <div class="event-page">
         <div class="container-xl">
-            <div class="top-title">
-                <div class="en">Program</div>
+            <div class="top-title">                
                 {{ if eq .Title "visual_art" }}
                     {{ $page_title := .Language.Params.tag_visual_art }}
-                    <div class="ch">展演: {{ $page_title }}</div> 
+                    <div class="ch">{{ $page_title }}</div> 
                 {{ else if eq .Title "public_art" }}
                     {{ $page_title := .Language.Params.tag_public_art }}
-                    <div class="ch">展演: {{ $page_title }}</div>
+                    <div class="ch">{{ $page_title }}</div>
                 {{ else if eq .Title "performing_art" }}
                     {{ $page_title := .Language.Params.tag_performing_art }}
-                    <div class="ch">展演: {{ $page_title }}</div> 
+                    <div class="ch">{{ $page_title }}</div> 
                 {{ else if eq .Title "film_art" }}
                     {{ $page_title := .Language.Params.tag_film_art }}
-                    <div class="ch">展演: {{ $page_title }}</div> 
+                    <div class="ch">{{ $page_title }}</div> 
                 {{ else if eq .Title "ai_music" }}
                     {{ $page_title := .Language.Params.tag_ai_music }}
-                    <div class="ch">展演: {{ $page_title }}</div> 
+                    <div class="ch">{{ $page_title }}</div> 
                 <!-- year -->
                 {{ else if eq .Title "2020spring" }}
                     {{ $page_title := .Language.Params.tag_2020spring }}
-                    <div class="ch">展演: {{ $page_title }}</div> 
+                    <div class="ch">{{ $page_title }}</div> 
                 {{ else if eq .Title "2019fall" }}
                     {{ $page_title := .Language.Params.tag_2019fall }}
-                    <div class="ch">展演: {{ $page_title }}</div> 
+                    <div class="ch">{{ $page_title }}</div> 
                 {{ else if eq .Title "2019spring" }}
                     {{ $page_title := .Language.Params.tag_2019spring }}
-                    <div class="ch">展演: {{ $page_title }}</div>
+                    <div class="ch">{{ $page_title }}</div>
                 {{ else if eq .Title "2018fall" }}
                     {{ $page_title := .Language.Params.tag_2018fall }}
-                    <div class="ch">展演: {{ $page_title }}</div> 
+                    <div class="ch">{{ $page_title }}</div> 
                 {{ else if eq .Title "2019spring" }}
                     {{ $page_title := .Language.Params.tag_2018spring }}
-                    <div class="ch">展演: {{ $page_title }}</div>
+                    <div class="ch">{{ $page_title }}</div>
                 {{ end }}
             </div>
             <!-- event tag -->
             <div class="event-tag">
                 <div class="dropdown-year">
-                    <div class="item default">Release Year</div>
+                    <div class="item default">按四季查詢</div>
                     <div class="item-sub-menu">
                         <a href="/categories/2020fall/" class="menu-item">2020秋</a>
                         <a href="/categories/2020spring/" class="menu-item">2020春</a>
