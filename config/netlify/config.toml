@@ -1,5 +1,5 @@
-baseURL = "https://arts-nthu.netlify.app/"
-title = "NTHU ArtsCenter"
+baseURL = "https://pdps-taipei-100th.netlify.app/"
+title = "臺北市平等國小"
 
 defaultContentLanguage = "zh-tw"
 defaultContentLanguageInSubdir = false
