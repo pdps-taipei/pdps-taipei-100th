@@ -3,7 +3,7 @@
 
         {{ range $index, $slide := .items }}
         
-        <div class="carousel-item {{ if eq $index 0 }} active {{ end }}" style="height: 100%; width: 100%; color: $black">
+        <div class="carousel-item {{ if eq $index 0 }} active {{ end }}" style="height: 100%; width: 100%;">
             <div class="carousel-block" style="background-image: url('{{ .image }}');" alt="..." ></div>
             <div class="carousel-caption d-none d-md-block">
                 

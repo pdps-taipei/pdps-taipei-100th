@@ -1,4 +1,5 @@
 <div class="latest-news">
+    <h2 class="latest-news-title">最新消息</h2>
     {{ $news := sort .items ".Params.start_date" "desc" }}
     {{ range $index, $page := first 5 .items}}
     {{ if eq .Params.draft false }}
@@ -14,4 +15,3 @@
     {{ end }}
     <a href="/news" class="more-news">更多消息...</a>
 </div>
-

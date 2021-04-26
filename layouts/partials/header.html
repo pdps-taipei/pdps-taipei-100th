@@ -1,94 +1,46 @@
-<nav class="menu">
-  <div class="m-container">
-    <a  href="/" class="brand">
-      <img src="/img/logo.png" alt="" class="pic">
-      <div class="content">
-        <div class="ch">臺北市平等國小百周年校慶專屬網站</div>
-        <div class="en">PING DENG ELEMENTARY SCHOOL 100TH ANNIVERSARY WEBSITE</div>
+<header class="navigation">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand d-flex" href="{{site.BaseURL}}">
+      <img class="pic" src="/images/logo.png" alt="{{site.Title}}">
+      <div>
+        <div>臺北市平等國小百周年校慶專屬網站</div>
+        <div style="font-size: 0.7rem">PING DENG ELEMENTARY SCHOOL 100TH ANNIVERSARY WEBSITE</div>
       </div>
     </a>
-    
-    <div class="main">
-      {{ $language := .Language.Params }}
-      {{ range .Site.Menus.main }}
-      <a class="menu-a" href="{{ .URL | absURL }}">
-        <div class="m-item" style="text-align: center;">{{ .Name }}<br>{{/* index $language .Identifier */}}</a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navogation"
+      aria-controls="navogation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navogation">
+      <ul class="navbar-nav ml-auto">
+        {{ range site.Menus.main }}
         {{ if .HasChildren }}
-        <div class="submenu">
-          {{ range .Children }}
-          <a href="{{ .URL | absURL }}" class="sub-item" style="text-align: center;">
+        <li class="nav-item dropdown">
+          <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             {{ .Name }}
-            <br>
-            {{/* index $language .Identifier */}}
           </a>
-
-          {{ end }}
-        </div>
+          <div class="dropdown-menu" >
+            {{ range .Children }}
+            <a class="dropdown-item" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            {{ end }}
+          </div>
+        </li>
+        {{ else }}
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="{{ .URL | absURL }}">{{ .Name }}</a>
+        </li>
         {{ end }}
-      </div>
-      {{ end }}
-      
-      <!-- language dropdown -->
-      <div class="dropdown invisible">
-        <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #287C01; border-color: #287C01;">
-          {{ .Language.LanguageName }}
-        </a>      
-        <div class="dropdown-menu">
-          {{ range $.Site.Home.AllTranslations }}
-          <a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-          {{ end }}
-        </div>
-      </div>
-    
-
-
-    </div>
-  </div>
-</nav>
-
-<!-- menu mobile -->
-<nav class="navbar navbar-expand-lg navbar-dark menu-mobile">
-  <a href="/" class="m-container navbar-brand">
-    <div class="brand">
-      <img src="/img/logo.png" alt="" class="pic">
-      <div class="content">
-        <div class="ch">臺北市平等國小</div>
-        <div class="en">PING DENG ELEMENTARY SCHOOL</div>
-      </div>
-    </div>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      {{ $language := .Language.Params }}
-      {{ range .Site.Menus.main }}
-      <a class="menu-a nav-item" href="{{ .URL | absURL }}">
-        <div class="m-item nav-link" style="text-align: center;">{{ .Name }}<br>{{ index $language .Identifier }}</a>
-        {{ if .HasChildren }}
-        <div class="submenu">
-          {{ range .Children }}
-          <a href="{{ .URL | absURL }}" class="sub-item nav-link" style="text-align: center;">
-            {{ .Name }}
-            <br>
-            {{ index $language .Identifier }}
-          </a>
-
-          {{ end }}
-        </div>
         {{ end }}
-      </div>
+      </ul>
+      {{ if site.Params.search }}
+      {{ "<!-- search -->" | safeHTML }}
+      <form class="form-inline position-relative ml-lg-4" action="{{ site.BaseURL }}/search">
+        <input class="form-control px-0 w-100" type="search" placeholder="Search" id="search-query" name="s">
+        <button class="search-icon" type="submit"><i class="ti-search text-dark"></i></button>
+      </form>
       {{ end }}
-    </ul>
-  </div>
-</div>
-</nav>
-      <!-- language dropdown -->
-      
-
-
     </div>
-  </div>
-</nav>
+  </nav>
+</header>

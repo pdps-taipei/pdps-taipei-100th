@@ -1,165 +1,9 @@
 $black: black
 $dark_brown: #f9f6ef
 $dark_green: #072a2a
-$hight_light: #287c01
+$hight_light: #ff8c33
 $light_white: $black
 $dark_white:  #979797
-$font_title: 30px
-$font_mid_title: 22px
-$font_sub_title: 20px
-$font_large: 22px
-$font_middle: 20px
-$font_small: 18px
-
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC')
-//for media query
-
-
-@mixin setLinkStyleAll
-    &, &:hover, &:link, &:active, &:visited
-        @content;
-
-@mixin flexCenterRow
-    display: flex
-    justify-content: space-around
-    align-items: center
-
-@mixin flexCenterCol
-    display: flex
-    justify-content: space-around
-    align-items: center
-    flex-direction: column
-
-@mixin flexLayout($type, $direction)
-    display: flex
-    @if $direction == 'row'
-        flex-direction: row
-        @if $type == 'center'
-            justify-content: center
-            align-items: center
-        @if $type == 'between'
-            justify-content: space-between
-            align-items: center
-        @if $type == 'around'
-            justify-content: space-around
-            align-items: center
-        @if $type == 'start'
-            justify-content: flex-start
-            align-items: center
-
-    @if $direction == 'col'
-        flex-direction: column
-        @if $type == 'center'
-            justify-content: center
-            align-items: center
-        @if $type == 'between'
-            justify-content: space-between
-            align-items: center
-        @if $type == 'start2'
-            justify-content: flex-start
-            align-items: center
-        @if $type == 'start'
-            justify-content: center
-            align-items: flex-start
-
-
-
-body
-    font-family:  "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB",'Noto Sans TC',Arial,sans-serif!important
-    font-weight: 100
-    background-color: $dark_brown !important
-    width: 100%
-
-._container
-    max-width: 1150px
-    //width: 90%
-    background-color: $dark_brown
-    color: $light_white
-    margin: auto
-
-h2 
-    margin: 10px 0px
-    
-h3
-    font-size: $font_sub_title
-
-a
-    text-decoration: none
-
-p, ol, ul
-    font-size: $font_middle
-    letter-spacing: 4.8px
-
-.page-content
-    word-break: break-word
-
-
-.slide-fade-enter-active
-  transition: all .3s ease
-
-.slide-fade-leave-active
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)
-
-.slide-fade-enter, .slide-fade-leave-to
-  transform: translateY(-50px)
-  opacity: 0
-
-.modal-content
-  background: transparent !important
-
-.page-content
-    background-color: $dark_brown
-    color: $light_white
-
-.page-title
-    padding: 20px 0px
-    margin: 50px 0px
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    color: $hight-light
-    background-color: $dark_brown
-    //transform: translateX(50%) translateY(-70%)
-    letter-spacing: 4.8px
-    z-index: 1
-    .line
-        border-style: solid
-        border-width: 3px 0 0 0
-        border-color: $hight-light
-        position: relative
-        height: 50px
-        width: 100%
-        
-    .page-title-text
-        position: absolute
-        top: 100px
-        text-align: center
-        background-color: $dark_brown
-        letter-spacing: 4.8px
-        min-width: 150px
-        padding: 0px 20px
-        .ch
-            font-size: 32px
-        .en
-            font-size: 20px
-
-.page-pagination
-    display: flex
-    justify-content: center
-    .pagination
-        .page-item
-            .page-link
-                background: $dark_brown
-                color: $black
-            .page-link:hover
-                background: $hight-light
-        .page-item.active .page-link
-            border-color: $hight-light
-            background: $hight-light
-
-.right:hover .m-item
-    display: block
 
 .carousel-block
     display: flex;
@@ -170,4 +14,7 @@ p, ol, ul
     background-size: cover;
     background-image: linear-gradient(0deg, rgba(36, 44, 51, 0.5), rgba(36, 44, 51, 0.5));
     align-items: center;
-    
+
+.pic
+    width: 50px
+    margin-right: 1rem
