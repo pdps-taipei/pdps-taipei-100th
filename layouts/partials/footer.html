@@ -7,7 +7,7 @@
         </div>
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
           {{ if .Site.Params.address }}
-          <h6>Address</h6>
+          <h6>地址</h6>
           <ul class="list-unstyled">
             <li class="font-secondary text-dark">{{site.Params.address | markdownify }}</li>
           </ul>
@@ -15,13 +15,19 @@
         </div>
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
           {{ if or  .Site.Params.mobile  .Site.Params.email }}         
-          <h6>Contact Info</h6>
+          <h6>聯絡方式</h6>
           <ul class="list-unstyled">
+            {{ if .Site.Params.time }}
+            <li class="font-secondary text-dark">{{ .Site.Params.time | markdownify }}</li>
+            {{ end }}
             {{ if .Site.Params.mobile }}
-            <li class="font-secondary text-dark">Tel : {{ .Site.Params.mobile | markdownify }}</li>
+            <li class="font-secondary text-dark">{{ .Site.Params.mobile | markdownify }}</li>
+            {{ end }}
+            {{ if .Site.Params.mobile2 }}
+            <li class="font-secondary text-dark">{{ .Site.Params.mobile2 | markdownify }}</li>
             {{ end }}
             {{ if .Site.Params.email }}           
-            <li class="font-secondary text-dark">Email : {{ .Site.Params.email | markdownify }}</li>
+            <li class="font-secondary text-dark">{{ .Site.Params.email }}</li>
             {{ end }}
           </ul>
           {{ end }}

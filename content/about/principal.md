@@ -1,8 +1,7 @@
 ---
-title: principal
+title: 歷屆校長
 lastmod: 2019-01-28
 layout: principal
-page_title: 歷屆校長
 japan: 
   - name: "日本人1"
     title: "第1任校長"
