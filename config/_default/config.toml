@@ -1,8 +1,7 @@
 # default config
 baseurl = "https://pdps-taipei.github.io"
 languageCode = "en-us"
-title = "Parsa Hugo | Personal Blog Template"
-# theme = "parsa-hugo"
+title = "臺北市平等國小百周年校慶專屬網站"
 summaryLength = "10"
 paginate = 6
 # google analytics

@@ -1,7 +1,7 @@
 # default config
 baseurl = "https://pdps-taipei.netlify.app"
 languageCode = "en-us"
-title = "Parsa Hugo | Personal Blog Template"
+title = "臺北市平等國小百周年校慶專屬網站"
 # theme = "parsa-hugo"
 summaryLength = "10"
 paginate = 6
