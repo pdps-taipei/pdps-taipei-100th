@@ -7,9 +7,21 @@
         </div>
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
           {{ if .Site.Params.address }}
-          <h6>地址</h6>
+          <h6>百周年校慶訊息</h6>
           <ul class="list-unstyled">
             <li class="font-secondary text-dark">{{site.Params.address | markdownify }}</li>
+            {{ if .Site.Params.time }}
+            <li class="font-secondary text-dark">{{ .Site.Params.time | markdownify }}</li>
+            {{ end }}
+            {{ if .Site.Params.time }}
+            <li class="font-secondary text-dark">{{ .Site.Params.date | markdownify }}</li>
+            {{ end }}
+            {{ if .Site.Params.time }}
+            <li class="font-secondary text-dark">{{ .Site.Params.invitation1 | markdownify }}</li>
+            {{ end }}
+            {{ if .Site.Params.time }}
+            <li class="font-secondary text-dark">{{ .Site.Params.invitation2 | markdownify }}</li>
+            {{ end }}
           </ul>
           {{ end }}
         </div>
@@ -17,9 +29,6 @@
           {{ if or  .Site.Params.mobile  .Site.Params.email }}         
           <h6>聯絡方式</h6>
           <ul class="list-unstyled">
-            {{ if .Site.Params.time }}
-            <li class="font-secondary text-dark">{{ .Site.Params.time | markdownify }}</li>
-            {{ end }}
             {{ if .Site.Params.mobile }}
             <li class="font-secondary text-dark">{{ .Site.Params.mobile | markdownify }}</li>
             {{ end }}
@@ -33,10 +42,16 @@
           {{ end }}
         </div>
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-          <h6>Follow</h6>
+          <h6>捐款訊息</h6>
           <ul class="list-inline d-inline-block">
             {{ range site.Params.social }}
             <li class="list-inline-item"><a href="{{ .link | safeURL }}" class="text-dark"><i class="{{ .icon }}"></i></a></li>
+            {{ end }}
+            {{ if .Site.Params.mobile }}
+            <li class="font-secondary text-dark">{{ .Site.Params.donate1 | markdownify }}</li>
+            {{ end }}
+            {{ if .Site.Params.mobile2 }}
+            <li class="font-secondary text-dark">{{ .Site.Params.donate2 | markdownify }}</li>
             {{ end }}
           </ul>
         </div>

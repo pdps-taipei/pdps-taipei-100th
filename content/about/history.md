@@ -22,3 +22,7 @@ lastmod: 2019-01-28
 民國63年(西元1974年) 學校改稱「臺北市士林區平等國民小學」。
 
 民國110年6月6日(西元2021年6月6日) 臺北市士林區平等國民小學百周年校慶。
+
+![](/images/uploads/invitation/invitation-01.png)
+
+![](/images/uploads/invitation/invitation-02.png)

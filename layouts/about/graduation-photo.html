@@ -15,20 +15,20 @@
     <div class="page-content page-activity">
         <div class="introduction mt-5 mb-5">
             <p>{{ .Params.introduction }}</p>
+            <p>{{ .Params.description | markdownify }}</p>
         </div>
         
-    
-        {{ range .Params.block }}
         <div class="block row mt-5 mb-5">
-            <div class="col-4">
+        {{ range .Params.block }}
+       
+            <div class="col-lg-4 mb-5">
                 <img src="{{ .image }}" class="img-fluid" alt="Responsive image">
+                <div class="block-description text-center">{{ .title }}</div>
             </div>
-            <div class="col-8">
-                <div class="block-description">{{ .description | markdownify }}</div>
-            </div>
+        {{ end }}
         </div>
         
-        {{ end }}
+        
     </div>
 </div>
 {{ end }}

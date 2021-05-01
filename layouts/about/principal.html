@@ -25,13 +25,15 @@
         {{ range .Params.japan }}
         <div class="block row mt-5 mb-5">
             <div class="col-3">
-                <img src="{{ .image }}" class="img-fluid" alt="Responsive image">
+                <img src="{{ .image }}" class="w-100" alt="Responsive image">
             </div>
             <div class="col-9">
                 <h4>{{ .name }}</h4>
                 <h5>{{ .title }}</h5>
                 <h5>{{ .time }}</h5>
-                <h5>{{ .description | markdownify }}</h5>
+                <h5>服務年資：{{ .term }}</h5>
+                <h5>服務地點：{{ .school_name }}</h5>
+                <h5>補充說明：{{ .description | markdownify }}</h5>
             </div>
         </div>
         
@@ -40,13 +42,15 @@
         {{ range .Params.now }}
         <div class="block row mt-5 mb-5">
             <div class="col-3">
-                <img src="{{ .image }}" class="img-fluid" alt="Responsive image">
+                <img src="{{ .image }}" class="w-100" alt="Responsive image">
             </div>
             <div class="col-9">
                 <h4>{{ .name }}</h4>
                 <h5>{{ .title }}</h5>
                 <h5>{{ .time }}</h5>
-                <h5>{{ .description | markdownify }}</h5>
+                <h5>服務年資：{{ .term }}</h5>
+                <h5>服務地點：{{ .school_name }}</h5>
+                <h5>補充說明：{{ .description | markdownify }}</h5>
             </div>
         </div>
         
