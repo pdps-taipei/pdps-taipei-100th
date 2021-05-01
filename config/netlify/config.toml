@@ -63,13 +63,20 @@ author = "Li Chi-Haw"
 author_image = "images/banner-img.png"
 bio = ""
 # Contact info
-mobile = "(02)2861-0503"
-email = "exmaple@ymail.com"
-address = "臺北市士林區平菁街101號"
+time = "日期：110年6月6日"
+date = "時間：上午9時30分至14時"
+mobile = "電話：(02)2861-0503"
+mobile2 = "傳真：(02)2861-3642"
+email = "電子郵件：pdps@pdps.tp.edu.tw"
+address = "活動地址：臺北市士林區平菁街101號"
+donate1 = "[捐款意向書](/images/uploads/donate/donate-1.docx)"
+donate2 = "[捐款收支管理委員會作業要點](/images/uploads/donate/donate-2.docx)"
+invitation1 = "[邀請卡封面](/images/uploads/invitation/invitation-01.png)"
+invitation2 = "[邀請卡內頁](/images/uploads/invitation/invitation-02.png)"
 # Contact Form Action
 contact_form_action = "#"
 # copyright
-copyright = "Copyright &copy; 2020 a theme by [themefisher.com](themefisher.com)"
+copyright = "網站建置於民國110年5月1日__網頁維護者：黎季昊__網頁主題：[themefisher.com](themefisher.com)"
 
 # Instagram feed
 [params.instafeed]
