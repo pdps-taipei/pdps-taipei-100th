@@ -48,7 +48,7 @@ link = "plugins/search/search.js"
 
 # deult parameter
 [params]
-logo = "images/logo.png"
+logo = "images/logo-1.png"
 home = "Home"
 # theme layout ( two layout is available, "1" and "2" )
 layout = "1"
@@ -59,24 +59,31 @@ preloader = true
 # search
 search = true
 # about author
-author = "Lichihaw"
+author = "Li Chi-Haw"
 author_image = "images/banner-img.png"
 bio = ""
 # Contact info
-time = "110年6月6日上午9時30分至14時"
-mobile = "(02)2861-0503"
-mobile2 = "(02)2861-3642"
-email = "test@gmail.com"
-address = "臺北市士林區平菁街101號"
+time = "日期：110年6月6日"
+date = "時間：上午9時30分至14時"
+mobile = "電話：(02)2861-0503"
+mobile2 = "傳真：(02)2861-3642"
+email = "電子郵件：lichihaw@gmail.com"
+address = "活動地址：臺北市士林區平菁街101號"
+donate1 = "[捐款意向書](/images/uploads/donate/donate-1.docx)"
+donate2 = "[捐款收支管理委員會作業要點](/images/uploads/donate/donate-2.docx)"
+invitation1 = "[邀請卡封面](/images/uploads/invitation/invitation-01.png)"
+invitation2 = "[邀請卡內頁](/images/uploads/invitation/invitation-02.png)"
 # Contact Form Action
 contact_form_action = "#"
 # copyright
-copyright = "Copyright &copy; 2020 a theme by [themefisher.com](themefisher.com)"
+# copyright = "Copyright &copy; 2020 a theme by [themefisher.com](themefisher.com)"
+copyright = "網站建置於民國110年5月1日   網頁維護者：黎季昊"
 
 # Instagram feed
-[params.instafeed]
-enable = true
-access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
+# [params.instafeed]
+# enable = true
+# access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
+
 
 # cookies
 [params.cookies]
@@ -84,18 +91,19 @@ enable = true
 expire_days = 2
 
 # social site
-[[params.social]]
-icon = "ti-facebook"
-link = "https://facebook.com/themefisher"
+# [[params.social]]
+# icon = "ti-facebook"
+# link = "https://facebook.com/themefisher"
+# 
+# [[params.social]]
+# icon = "ti-twitter-alt"
+# link = "#"
+# 
+# [[params.social]]
+# icon = "ti-linkedin"
+# link = "#"
+# 
+# [[params.social]]
+# icon = "ti-github"
+# link = "#"
 
-[[params.social]]
-icon = "ti-twitter-alt"
-link = "#"
-
-[[params.social]]
-icon = "ti-linkedin"
-link = "#"
-
-[[params.social]]
-icon = "ti-github"
-link = "#"

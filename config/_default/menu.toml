@@ -1,7 +1,7 @@
 [[main]]
 identifier = "news"
 name = "最新消息"
-url = "/news"
+url = "/news/"
 weight = 10
 
 [[main]]
@@ -16,17 +16,17 @@ name = "歷屆校長"
 url = "/about/principal/"
 weight = 40
 
-[[main]]
-identifier = "photo"
-name = "歷史相片"
-url = "/about/photo/"
-weight = 50
-
-[[main]]
-identifier = "honor"
-name = "歷年榮耀"
-url = "/about/honor/"
-weight = 60
+# [[main]]
+# identifier = "photo"
+# name = "歷史相片"
+# url = "/about/photo/"
+# weight = 50
+# 
+# [[main]]
+# identifier = "honor"
+# name = "歷年榮耀"
+# url = "/about/honor/"
+# weight = 60
 
 #[[main]]
 #identifier = "work"

@@ -1,0 +1,58 @@
+# Query: News
+# ContextLines: 1
+
+27 results - 8 files
+
+assets\sass\main.sass:
+  2  
+  3: @import "layout/latest-news"
+
+assets\sass\layout\latest-news.sass:
+   1: .latest-news
+   2      padding-bottom: 50px
+
+   5  
+   6:     .latest-news-title
+   7          margin: 3rem 0
+
+  31          .information-title
+  32:     .more-news
+  33          float: right
+
+config\_default\menu.toml:
+  1  [[main]]
+  2: identifier = "news"
+  3  name = "最新消息"
+  4: url = "/news/"
+  5  weight = 10
+
+layouts\index.html:
+   6  <!-- carousel -->
+   7: <!-- latest-news -->
+   8: {{ $news := first 6 (sort (where .Site.RegularPages "Section" "in" (slice "news")) ".Params.start_date" "desc") }}
+   9: {{ partial "latest-news" (dict "items" $news)}}
+  10: <!-- latest-news -->
+  11  <!-- featured post -->
+
+layouts\_default\single.html:
+  3  <!-- checking blog -->
+  4: {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+  5  
+
+layouts\news\single.html:
+  3  <!-- checking blog -->
+  4: {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+  5  
+
+layouts\partials\latest-news.html:
+   1: <div class="latest-news">
+   2:     <h2 class="latest-news-title">最新消息</h2>
+   3:     {{ $news := sort .items ".Params.start_date" "desc" }}
+   4      {{ range $index, $page := first 5 .items}}
+
+  15      {{ end }}
+  16:     <a href="/news" class="more-news">更多消息...</a>
+  17  </div>
+
+resources\_gen\assets\sass\sass\main.sass_48b060fe05b0a273d182ef83c0605941.content:
+  1: .carousel-block{display:flex;flex-direction:column;justify-content:center;height:100%;background-position:50%;background-size:cover;background-image:linear-gradient(0deg,rgba(36,44,51,.5),rgba(36,44,51,.5));align-items:center}.pic{width:50px;height:50px;margin-right:1rem}.latest-news{padding-bottom:50px;width:90%;margin:auto}.latest-news .latest-news-title{margin:3rem 0}.latest-news .information{display:flex;color:#000;text-decoration:none;flex-direction:row;font-size:22px;letter-spacing:2px;margin:10px 0;padding:10px 0;cursor:pointer}.latest-news .information:hover{color:#ff8c33}.latest-news .information .information-start-date{width:100px;background:#ff8c33;color:#f9f6ef;text-align:center;padding:5px;font-size:20px;border-radius:18px;margin:auto}.latest-news .more-news{float:right;font-size:18px;color:#000}
