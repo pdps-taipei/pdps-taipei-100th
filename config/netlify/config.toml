@@ -48,7 +48,7 @@ link = "plugins/search/search.js"
 
 # deult parameter
 [params]
-logo = "images/logo.png"
+logo = "images/logo-1.png"
 home = "Home"
 # theme layout ( two layout is available, "1" and "2" )
 layout = "1"
@@ -89,18 +89,18 @@ enable = true
 expire_days = 2
 
 # social site
-[[params.social]]
-icon = "ti-facebook"
-link = "https://facebook.com/themefisher"
-
-[[params.social]]
-icon = "ti-twitter-alt"
-link = "#"
-
-[[params.social]]
-icon = "ti-linkedin"
-link = "#"
-
-[[params.social]]
-icon = "ti-github"
-link = "#"
+# [[params.social]]
+# icon = "ti-facebook"
+# link = "https://facebook.com/themefisher"
+# 
+# [[params.social]]
+# icon = "ti-twitter-alt"
+# link = "#"
+# 
+# [[params.social]]
+# icon = "ti-linkedin"
+# link = "#"
+# 
+# [[params.social]]
+# icon = "ti-github"
+# link = "#"
