@@ -1,64 +1,59 @@
 [[main]]
-identifier = "about"
-name = "關於平等"
-url = "/about/"
+identifier = "news"
+name = "最新消息"
+url = "/news"
 weight = 10
 
 [[main]]
 identifier = "history"
 name = "校史簡介"
 url = "/about/history/"
-parent = "about"
 weight = 20
-
-[[main]]
-identifier = "graduation-photo"
-name = "歷屆畢業照"
-url = "/about/graduation-photo/"
-parent = "about"
-weight = 30
 
 [[main]]
 identifier = "principal"
 name = "歷屆校長"
 url = "/about/principal/"
-parent = "about"
 weight = 40
 
 [[main]]
 identifier = "photo"
 name = "歷史相片"
 url = "/about/photo/"
-parent = "about"
 weight = 50
 
 [[main]]
 identifier = "honor"
 name = "歷年榮耀"
 url = "/about/honor/"
-parent = "about"
 weight = 60
 
-[[main]]
-identifier = "work"
-name = "籌備活動"
-url = "/work/"
-weight = 100
+#[[main]]
+#identifier = "work"
+#name = "籌備活動"
+#url = "/work/"
+#weight = 100
 
 [[main]]
 identifier = "blog"
-name = "活動介紹"
+name = "平等十景"
 url = "/blog/"
 weight = 170
 
 [[main]]
-identifier = "friends"
-name = "邀請訊息"
-url = "/friends/"
-weight = 210
+identifier = "graduation-photo"
+name = "歷屆畢業照"
+url = "/about/graduation-photo/"
+weight = 30
 
-[[main]]
-identifier = "calendar"
-name = "活動月曆"
-url = "/calendar/"
-weight = 220
+#[[main]]
+#identifier = "friends"
+#name = "邀請訊息"
+#url = "/friends/"
+#weight = 210
+
+#[[main]]
+#identifier = "calendar"
+#name = "活動月曆"
+#url = "/calendar/"
+#weight = 220
