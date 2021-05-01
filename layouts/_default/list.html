@@ -21,12 +21,12 @@
         {{ if eq site.Params.layout "1" }}
         <div class="row masonry-container">
           {{ range $paginator.Pages }}
-          <div class="col-sm-12 mb-5">
+          <div class="col-sm-6 mb-5">
             <article class="text-center">
               <img class="img-fluid mb-4" src="{{.Params.Image | absURL }}" alt="post-thumb">
               <p class="text-uppercase mb-2">{{ .Params.Categories }}</p>
               <h4 class="title-border"><a class="text-dark" href="{{.Permalink}}">{{.Title}}</a></h4>
-              <p>{{ .Summary }}</p>
+              <p>{{ .Description | truncate 50 }}</p>
               <a href="{{.Permalink}}" class="btn btn-transparent">read more</a>
             </article>
           </div>
@@ -37,7 +37,7 @@
 
         <div class="row">
           {{ range $i,$p := $paginator.Pages }}
-          <div class="col-12 mb-100">
+          <div class="col- mb-100">
             <article data-file="{{.Permalink}}" data-target="article"
               class="article-full-width {{if not (modBool $i 2)}} article-right {{ end }}">
               <div class="post-image">
