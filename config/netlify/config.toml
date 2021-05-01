@@ -79,9 +79,9 @@ contact_form_action = "#"
 copyright = "網站建置於民國110年5月1日__網頁維護者：黎季昊__網頁主題：[themefisher.com](themefisher.com)"
 
 # Instagram feed
-[params.instafeed]
-enable = true
-access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
+# [params.instafeed]
+# enable = true
+# access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
 
 # cookies
 [params.cookies]
