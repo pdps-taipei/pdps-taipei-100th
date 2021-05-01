@@ -77,7 +77,8 @@ invitation2 = "[邀請卡內頁](/images/uploads/invitation/invitation-02.png)"
 contact_form_action = "#"
 # copyright
 # copyright = "Copyright &copy; 2020 a theme by [themefisher.com](themefisher.com)"
-copyright = "網站建置於民國110年5月1日   網頁維護者：黎季昊"
+# copyright = "網站建置於民國110年5月1日   網頁維護者：黎季昊 網頁主題：[themefisher.com](themefisher.com)"
+copyright = "網站建置於民國110年5月1日__網頁維護者：黎季昊__網頁主題：[themefisher.com](themefisher.com)"
 
 # Instagram feed
 # [params.instafeed]
