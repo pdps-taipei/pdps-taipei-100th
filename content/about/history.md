@@ -1,6 +1,9 @@
 ---
 title: 校史簡介
 lastmod: 2019-01-28
+layout: history
+img1: /images/uploads/invitation/invitation-01.png
+img2: /images/uploads/invitation/invitation-02.png
 ---
 
 民國10年(西元1921年，大正10年) 日治時期學校成立於合誠宮私塾「紅壇」，命名為「草山公學校坪頂分離教室」。
@@ -23,6 +26,3 @@ lastmod: 2019-01-28
 
 民國110年6月6日(西元2021年6月6日) 臺北市士林區平等國民小學百周年校慶。
 
-![](/images/uploads/invitation/invitation-01.png)
-
-![](/images/uploads/invitation/invitation-02.png)
