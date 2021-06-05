@@ -3,7 +3,7 @@ title: 歷屆校長
 lastmod: 2019-01-28
 layout: principal
 japan: 
-  - name: 錦織喜與志
+  - name: 1錦織喜與志
     title: 日治時期第1任校長
     time: 民國10-11年(西元1921-1922年，大正10-11年)
     term: 1年
